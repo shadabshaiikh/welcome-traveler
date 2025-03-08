@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: travelling-app
+  name: webapps
 spec:
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
         app: travelling-app
     spec:
       containers:
-        - name: travelling-app
+        - name: webapps
           image: shadabsk/travelling-app:latest # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
